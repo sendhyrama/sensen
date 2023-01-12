@@ -1,0 +1,96 @@
+---
+import { Icon } from 'astro-icon';
+import ThemeButton from './ThemeButton.jsx';
+
+export interface Props {
+  class?: string;
+  grow?: boolean;
+  sticky?: boolean;
+}
+
+const { class: className, grow, sticky } = Astro.props;
+---
+
+<nav
+  class:list={[
+    'z-5 text-base sm:text-lg',
+    className,
+    (grow || sticky) && 'overflow-x-auto group',
+    sticky &&
+      'background flex gap-3 sm:gap-5 sticky top-[-1px] mt-4 sm:mt-2 py-2 sm:py-4 border-2 border-transparent'
+  ]}
+  data-sticky={sticky}
+>
+  { grow &&
+    <span
+      class="-mr-3 sm:-mr-5 group-[.sticked]:grow-[0.5] transition-[flex-grow] duration-300 ease-out"
+    ></span>
+  }
+  <a class="animate-margin" rel="prefetch" href="/" target="_self">
+    <Icon class="hidden group-[.sticked]:block" name="iconoir:home" size="32" />
+    <span class="group-[.sticked]:hidden">Home</span>
+  </a>
+  <a class="animate-margin" rel="prefetch" href="/blog" target="_self">
+    <Icon
+      class="hidden group-[.sticked]:block"
+      name="iconoir:multiple-pages"
+      size="30"
+    />
+    <span class="group-[.sticked]:hidden">Blog</span>
+  </a>
+  <a class="animate-margin" rel="prefetch" href="/projects" target="_self">
+    <Icon
+      class="hidden group-[.sticked]:block"
+      name="iconoir:code-brackets-square"
+      size="32"
+    />
+    <span class="group-[.sticked]:hidden">Projects</span>
+  </a>
+  <a class="animate-margin" rel="prefetch" href="/about" target="_self">
+    <Icon class="hidden group-[.sticked]:block" name="iconoir:user" size="32" />
+    <span class="group-[.sticked]:hidden">About</span>
+  </a>
+  <ThemeButton
+    class="cursor-pointer animate-margin"
+    client:load
+  >
+    <span class="hidden group-[.sticked]:block">
+      <Icon class="dark:hidden" name="iconoir:sun-light" size="28" />
+      <Icon class="hidden dark:block" name="iconoir:half-moon" size="28" />
+    </span>
+    <span class="group-[.sticked]:hidden">Theme</span>
+  </ThemeButton>
+</nav>
+
+<style>
+.group.sticked {
+  border-bottom: 2px solid var(--un-prose-hr);
+  transition-property: background-color, border-color;
+}
+
+.group.sticked .animate-margin {
+  margin: 0 0.35rem;
+  animation: margin 300ms ease-out;
+}
+
+@keyframes margin {
+  from { margin: 0 0rem; }
+  to { margin: 0 0.35rem; }
+}
+</style>
+
+<script>
+const nav = document.querySelector('nav') as HTMLElement;
+
+if ('sticky' in nav.dataset) {
+  const observer = new IntersectionObserver(
+    ([e]) => e.target.classList.toggle(
+      'sticked',
+      e.intersectionRatio < 1
+    ),
+    { threshold: [1] }
+  );
+
+  observer.observe(nav);
+}
+</script>

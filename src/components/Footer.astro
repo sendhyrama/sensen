@@ -1,0 +1,29 @@
+---
+export interface Props {
+  footer?: string;
+}
+
+const { footer = '' } = Astro.props;
+---
+
+<footer>
+  <hr class="mt-12" />
+  <span class="flex flex-col gap-2 not-prose text-sm text-right">
+    <p><a class="underline" href="#" data-to-top>Scroll to Top</a></p>
+    <p>{footer}</p>
+    <p>
+      <a class="underline" href="https://github.com/sglkc/blog/blob/master/LICENSE"
+      >MIT License</a>
+      <span>(c) 2023 sglkc</span>
+    </p>
+  </span>
+</footer>
+
+<script>
+const anchor = document.querySelector('a[data-to-top]') as HTMLAnchorElement;
+
+anchor.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scroll({ top: 0, behavior: 'smooth' });
+});
+</script>

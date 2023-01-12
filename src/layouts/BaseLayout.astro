@@ -1,0 +1,34 @@
+---
+import type HeadProps from '@/types/Head';
+import BaseHead from '@/components/BaseHead.astro';
+import '@fontsource/overpass-mono';
+import '@/styles/scrollbar.css';
+
+const props = Astro.props as HeadProps;
+---
+
+<html
+  class="no-transitions"
+  lang={(props && props.post) ? props.post.language : 'en'}
+>
+  <head>
+    <BaseHead {...props} />
+    <script is:inline>
+    const classList = document.documentElement.classList;
+    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'dark' || (!theme && prefDark)) classList.add('dark');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!prefMotion.matches) classList.remove('no-transitions');
+    });
+    </script>
+  </head>
+  <body class="background font-overpass">
+    <div class="mx-auto p-8 prose prose-zinc dark:prose-invert max-w-[66ch]">
+      <slot />
+    </div>
+  </body>
+</html>

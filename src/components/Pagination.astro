@@ -1,0 +1,33 @@
+---
+const { page } = Astro.props;
+---
+
+<nav class="flex justify-center mt-8 text-sm">
+  <div class="text-left">
+    {
+    page.url.prev && (
+      <a
+        class="font-light underline underline-offset-2"
+        href={page.url.prev || "#"}
+      >
+        &larr; Newer
+      </a>
+    )
+    }
+  </div>
+  <div class="text-center font-extralight">
+    Page {page.currentPage} / {page.lastPage}
+  </div>
+  <div class="text-right">
+    {
+    page.url.next && (
+      <a
+        class="font-light underline underline-offset-2"
+        href={page.url.next || "#"}
+      >
+        Older &rarr;
+      </a>
+    )
+    }
+  </div>
+</nav>

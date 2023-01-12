@@ -1,0 +1,55 @@
+---
+import type { PostProps } from '@/types/Post';
+import Giscus from '@/components/Giscus.astro';
+import ArticleLayout from './ArticleLayout.astro';
+
+type Props = PostProps;
+
+const post = Astro.props.frontmatter;
+const headings = Astro.props.headings;
+const { title, description, tags, created, updated, thumbnail } = post;
+const showComment = !(import.meta.env.DEV || post.draft);
+---
+
+<ArticleLayout {title} {description} {headings} {post}>
+  <header slot="header" class="text-center">
+    <h1 class="text-3xl font-semibold mt-8">{title}</h1>
+    { thumbnail && (
+      <img
+        class="aspect-video object-contain"
+        src={'/assets/post/' + thumbnail}
+        alt={title + ' thumbnail image'}
+        draggable="false"
+        width="100%"
+        height="100%"
+      />
+    )}
+    <h2 class="mx-4 sm:mx-6 my-6 font-italic font-normal text-base sm:text-lg">
+      { description }
+    </h2>
+    <ul class="pl-0 my-6 flex flex-wrap gap-x-4 justify-center">
+      { tags.map((tag: string) => <li class="list-none">#{ tag }</li>) }
+    </ul>
+    <ul class="pl-0 mt-4 flex flex-col gap-1 text-sm sm:text-base">
+      <li class="list-none">Posted on { created }</li>
+      { updated &&
+        <li class="list-none">Last Updated on { updated }</li>
+      }
+      <li class="list-none" data-read-time>.. min read</li>
+    </ul>
+  </header>
+  <slot />
+  <section slot="footer" class="text-center">
+    <hr class="mb-12" />
+    { showComment ? <Giscus /> : <p>Comments disabled in development</p> }
+  </section>
+</ArticleLayout>
+
+<script lang="js">
+const timeElm = document.querySelector('[data-read-time]');
+const article = document.querySelector('article');
+const words = article.innerText.trim().split(/\W+/).length;
+const time = (words / 175).toString().substring(0, 3);
+
+timeElm.innerText = time + ' min read';
+</script>

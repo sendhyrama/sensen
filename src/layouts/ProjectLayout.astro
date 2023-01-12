@@ -1,0 +1,45 @@
+---
+import type { ProjectProps } from '@/types/Project';
+import ArticleLayout from './ArticleLayout.astro';
+
+type Props = ProjectProps;
+
+const project = Astro.props.frontmatter;
+const headings = Astro.props.headings;
+const { title, created, description, stack, source, demo, thumbnail } = project;
+---
+
+<ArticleLayout {title} {description} {headings} {project}>
+  <header slot="header" class="text-center">
+    <h1 class="text-3xl font-semibold mt-8">{title}</h1>
+    { thumbnail && (
+      <img
+        class="aspect-video object-contain"
+        src={'/assets/project/' + thumbnail}
+        alt={title + ' thumbnail image'}
+        draggable="false"
+        width="100%"
+        height="100%"
+      />
+    )}
+    <p class="mt-6 text-sm sm:text-base">Initiated on { created }</p>
+    <ul class="pl-0 mt-4 flex flex-wrap gap-x-2 justify-center">
+      { stack.map((s: string) => <li class="list-none">[{s}]</li>) }
+    </ul>
+    { (demo || source) &&
+      <ul class="pl-0 mt-4 flex justify-center gap-4">
+        { source &&
+          <li class="list-none">
+            <a rel="prefetch" href={source}>Source</a>
+          </li>
+      }
+        { demo &&
+          <li class="list-none">
+            <a rel="prefetch" href={demo}>Demo</a>
+          </li>
+      }
+      </ul>
+    }
+  </header>
+  <slot />
+</ArticleLayout>
