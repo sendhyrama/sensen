@@ -1,0 +1,1 @@
+import"./chunks/Navbar.astro_astro_type_script_index_0_lang.98ca894e.js";const t=document.querySelector("a[data-to-top]");t.addEventListener("click",o=>{o.preventDefault(),window.scroll({top:0,behavior:"smooth"})});

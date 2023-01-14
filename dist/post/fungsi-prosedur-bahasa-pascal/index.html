@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="no-transitions" lang="id">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<base target="_blank">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="canonical" href="https://sglkc.my.id/post/fungsi-prosedur-bahasa-pascal/">
+<link rel="alternate" href="https://sglkc.my.id/post/fungsi-prosedur-bahasa-pascal/" hreflang="id">
+
+<title>Fungsi dan Prosedur dalam Bahasa Pascal // sglkc</title>
+
+<meta name="title" content="Fungsi dan Prosedur dalam Bahasa Pascal">
+<meta name="description" content="Apa itu fungsi dan prosedur, apa saja perbedaan diantara keduanya, dan jugamasing-masing contohnya
+">
+<meta name="theme-color" content="#ECC7BC">
+<meta http-equiv="content-language" content="id">
+
+<meta name="keywords" content="personal site, blogging, personal blog, blog project, portfolio, astro">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:url" content="https://sglkc.my.id/post/fungsi-prosedur-bahasa-pascal/">
+<meta property="og:title" content="Fungsi dan Prosedur dalam Bahasa Pascal">
+<meta property="og:site_name" content="sglkc.my.id">
+<meta property="og:description" content="Apa itu fungsi dan prosedur, apa saja perbedaan diantara keduanya, dan jugamasing-masing contohnya
+">
+<meta property="og:image" content="https://sglkc.my.id/assets/logo.webp">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://sglkc.my.id/post/fungsi-prosedur-bahasa-pascal/">
+<meta property="twitter:title" content="Fungsi dan Prosedur dalam Bahasa Pascal">
+<meta property="twitter:description" content="Apa itu fungsi dan prosedur, apa saja perbedaan diantara keduanya, dan jugamasing-masing contohnya
+">
+<meta property="twitter:image" content="https://sglkc.my.id/assets/logo.webp">
+
+
+<meta property="article:published_time" content="2023-01-04T17:00:00.000Z"><meta property="article:author" content="sglkc"><meta property="article:section" content="Blog"><meta property="article:tag" content="programming,pascal,indonesian">
+
+
+
+    <script>
+    const classList = document.documentElement.classList;
+    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'dark' || (!theme && prefDark)) classList.add('dark');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!prefMotion.matches) classList.remove('no-transitions');
+    });
+    </script>
+  <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.f41b1ac0.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script></head>
+  <body class="background font-overpass">
+    <div class="mx-auto p-8 prose prose-zinc dark:prose-invert max-w-[66ch]">
+      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><nav class="z-5 text-base sm:text-lg justify-center overflow-x-auto group background flex gap-3 sm:gap-5 sticky top-[-1px] mt-4 sm:mt-2 py-2 sm:py-4 border-2 border-transparent astro-P63ZB4CN" data-sticky>
+  
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:home"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 9.5 12 4l9 5.5M19 13v6.4a.6.6 0 0 1-.6.6H5.6a.6.6 0 0 1-.6-.6V13"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Home</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/blog" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="30" height="30" astro-icon="iconoir:multiple-pages"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7 18h7M7 14h1M7 10h3M7 2h9.5L21 6.5V19"/><path d="M3 20.5v-14A1.5 1.5 0 0 1 4.5 5h9.752a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 18 8.75V20.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 3 20.5z"/><path fill="currentColor" d="M14 8.4V5.354a.354.354 0 0 1 .604-.25l3.292 3.292a.353.353 0 0 1-.25.604H14.6a.6.6 0 0 1-.6-.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Blog</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/projects" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:code-brackets-square"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M10 17h-.667a2 2 0 0 1-2-2v-1.889C7.333 12.556 6 12 6 12s1.333-.556 1.333-1.111V9a2 2 0 0 1 2-2H10M14 17h.667a2 2 0 0 0 2-2v-1.889C16.667 12.556 18 12 18 12s-1.333-.556-1.333-1.111V9a2 2 0 0 0-2-2H14"/><path d="M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Projects</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/about" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:user"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M5 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">About</span>
+  </a>
+  <astro-island uid="2t2jsb" component-url="/ThemeButton.65b0039d.js" component-export="default" renderer-url="/client.60b9c972.js" props="{&quot;class&quot;:[0,&quot;cursor-pointer animate-margin astro-P63ZB4CN&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeButton&quot;,&quot;value&quot;:true}" await-children=""><button class="text-inherit cursor-pointer animate-margin astro-P63ZB4CN"><astro-slot><span class="hidden group-[.sticked]:block astro-P63ZB4CN">
+      <svg viewBox="0 0 24 24" class="dark:hidden astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:sun-light"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM22 12h1M12 2V1M12 23v-1M20 20l-1-1M20 4l-1 1M4 20l1-1M4 4l1 1M1 12h1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="hidden dark:block astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:half-moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11.507a9.493 9.493 0 0 0 18 4.219c-8.507 0-12.726-4.22-12.726-12.726A9.494 9.494 0 0 0 3 11.507z"/></svg>
+    </span><span class="group-[.sticked]:hidden astro-P63ZB4CN">Theme</span></astro-slot></button></astro-island>
+</nav>
+
+
+
+<main class="mt-12">
+    <header class="text-center">
+    <h1 class="text-3xl font-semibold mt-8">Fungsi dan Prosedur dalam Bahasa Pascal</h1>
+    
+    <h2 class="mx-4 sm:mx-6 my-6 font-italic font-normal text-base sm:text-lg">
+      Apa itu fungsi dan prosedur, apa saja perbedaan diantara keduanya, dan juga
+masing-masing contohnya
+
+    </h2>
+    <ul class="pl-0 my-6 flex flex-wrap gap-x-4 justify-center">
+      <li class="list-none">#programming</li><li class="list-none">#pascal</li><li class="list-none">#indonesian</li>
+    </ul>
+    <ul class="pl-0 mt-4 flex flex-col gap-1 text-sm sm:text-base">
+      <li class="list-none">Posted on 5 January 2023</li>
+      
+      <li class="list-none" data-read-time>.. min read</li>
+    </ul>
+  </header>
+    <hr class="my-12">
+    <article class="tracking-tighter sm:tracking-tight">
+      <blockquote id="toc" class="pl-6 sm:pl-8 my-12 font-not-italic">
+  <h1 class="mb-2 text-2xl">Table of Contents</h1>
+  <ol class=""><li>
+          <a class="underline-dotted" href="#fungsi">Fungsi</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#dalam-matematika">Dalam Matematika</a>
+        </li><li>
+          <a class="underline-dotted" href="#sintaksis-fungsi">Sintaksis Fungsi</a>
+        </li><li>
+          <a class="underline-dotted" href="#contoh-fungsi">Contoh Fungsi</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#fx--x--1">f(x) = x + 1</a>
+        </li><li>
+          <a class="underline-dotted" href="#angka-ganjil">Angka ganjil</a>
+        </li><li>
+          <a class="underline-dotted" href="#kalkulator">Kalkulator</a>
+        </li><li>
+          <a class="underline-dotted" href="#fungsi-rekursif">Fungsi rekursif</a>
+        </li></ol></ol><li>
+          <a class="underline-dotted" href="#prosedur">Prosedur</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#sintaksis-prosedur">Sintaksis Prosedur</a>
+        </li><li>
+          <a class="underline-dotted" href="#contoh-prosedur">Contoh Prosedur</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#menukar-dua-variabel">Menukar dua variabel</a>
+        </li><li>
+          <a class="underline-dotted" href="#menampilkan-array-integer">Menampilkan array integer</a>
+        </li></ol></ol><li>
+          <a class="underline-dotted" href="#perbedaan-fungsi-dan-prosedur">Perbedaan Fungsi dan Prosedur</a>
+        </li></ol>
+</blockquote>
+      <h1 id="fungsi"><a href="#fungsi">Fungsi</a></h1>
+<p>Fungsi atau <em><strong>function</strong></em>, layaknya sebuah fungsi dalam matematika, digunakan
+untuk menjalankan kode dan juga <strong>mengembalikan</strong> nilai. Nilai ini dapat berupa
+dalam tipe data apapun (integer, string, boolean, dll).</p>
+<h2 id="dalam-matematika"><a href="#dalam-matematika">Dalam Matematika</a></h2>
+<p>Perhatikan contoh sebuah fungsi matematika berikut:</p>
+<div class="my-2 text-center">
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+  </div>
+<p>Dalam fungsi tersebut, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> dapat diisi dengan angka berapapun, dan hasil
+dari perhitungan tersebut akan dikembalikan oleh <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">f.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord">.</span></span></span></span> Misalkan jika
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> maka dapat diketahui bahwa <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2.</mn></mrow><annotation encoding="application/x-tex">f(1) = 1 + 1 = 2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2.</span></span></span></span></p>
+<h2 id="sintaksis-fungsi"><a href="#sintaksis-fungsi">Sintaksis Fungsi</a></h2>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">function</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">NAME</span><span style="color:#E6E6E6">(PARAMETER): </span><span style="color:#569CD6">TYPE</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#6A9955">{ definisi variabel lokal }</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  STATEMENT; </span><span style="color:#6A9955">{ opsional }</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">NAME</span><span style="color:#E6E6E6"> := VALUE;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Fungsi dalam bahasa Pascal memiliki bentuk seperti diatas, dimana:</p>
+<ul>
+<li><em>NAME</em> adalah nama dari fungsi tersebut,</li>
+<li><em>PARAMETER</em> adalah kumpulan variabel yang bisa dimasukkan, parameter dalam
+fungsi harus berurutan,</li>
+<li><em>TYPE</em> adalah tipe data dari nilai yang dikembalikan,</li>
+<li>Deklarasi variabel lokal jika diperlukan,</li>
+<li><em>STATEMENT</em> adalah kode yang akan dieksekusi, dan</li>
+<li><em>VALUE</em> adalah nilai yang dikembalikan oleh fungsi.</li>
+</ul>
+<p>Seluruh fungsi dalam kode Pascal harus didefinisikan sebelum kode utama dan jika
+fungsi digunakan dalam fungsi lain, maka fungsi harus sesuai dengan urutan
+penggunaannya.</p>
+<h2 id="contoh-fungsi"><a href="#contoh-fungsi">Contoh Fungsi</a></h2>
+<h3 id="fx--x--1"><a href="#fx--x--1">f(x) = x + 1</a></h3>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(x) = x + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> jika diimplementasikan ke dalam bahasa Pascal.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> f;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> i : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">function</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">f</span><span style="color:#E6E6E6">(x: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">): </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  f := x + </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;x = &#39;</span><span style="color:#E6E6E6">); readln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">  writeln(</span><span style="color:#CE9178">&#39;f(&#39;</span><span style="color:#E6E6E6">, i,</span><span style="color:#CE9178">&#39;) =&#39;</span><span style="color:#E6E6E6">, </span><span style="color:#CE9178">&#39; &#39;</span><span style="color:#E6E6E6">, i, </span><span style="color:#CE9178">&#39; + 1 = &#39;</span><span style="color:#E6E6E6">, f(i));</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h3 id="angka-ganjil"><a href="#angka-ganjil">Angka ganjil</a></h3>
+<p>Fungsi <code>adalahGanjil</code> akan mengembalikan <em>true</em> jika angka yang dimasukkan
+adalah ganjil, dan <em>false</em> jika genap. Pada contoh ini fungsi mengembalikan
+tipe data boolean sehingga dapat digunakan dalam percabangan.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> ganjil;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> i : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">function</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">adalahGanjil</span><span style="color:#E6E6E6">(x: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">): </span><span style="color:#569CD6">boolean</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  adalahGanjil := (x </span><span style="color:#569CD6">mod</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6"> = </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan angka &#39;</span><span style="color:#E6E6E6">); readln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">if</span><span style="color:#E6E6E6"> adalahGanjil(i) </span><span style="color:#569CD6">then</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(</span><span style="color:#CE9178">&#39;angka &#39;</span><span style="color:#E6E6E6">, i, </span><span style="color:#CE9178">&#39; adalah ganjil&#39;</span><span style="color:#E6E6E6">)</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">else</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(</span><span style="color:#CE9178">&#39;angka &#39;</span><span style="color:#E6E6E6">, i, </span><span style="color:#CE9178">&#39; adalah genap&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h3 id="kalkulator"><a href="#kalkulator">Kalkulator</a></h3>
+<p>Fungsi <code>kalkulator</code> mengambil 2 buah parameter integer x &amp; y, dan 1 parameter
+string operasi, parameter operasi ini menentukan operasi yang dilakukan pada
+x &amp; y yang telah dimasukkan ke dalam fungsi.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> kalkulator;</span></span>
+<span class="line"><span style="color:#569CD6">var</span></span>
+<span class="line"><span style="color:#E6E6E6">  a, b : </span><span style="color:#569CD6">real</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  c : </span><span style="color:#569CD6">string</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">function</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">kalkulator</span><span style="color:#E6E6E6">(x, y: </span><span style="color:#569CD6">real</span><span style="color:#E6E6E6">; operasi: </span><span style="color:#569CD6">string</span><span style="color:#E6E6E6">): </span><span style="color:#569CD6">real</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">case</span><span style="color:#E6E6E6"> operasi </span><span style="color:#569CD6">of</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#CE9178">&#39;tambah&#39;</span><span style="color:#E6E6E6">: kalkulator := x + y;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#CE9178">&#39;kurang&#39;</span><span style="color:#E6E6E6">: kalkulator := x - y;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#CE9178">&#39;kali&#39;</span><span style="color:#E6E6E6">: kalkulator := x * y;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#CE9178">&#39;bagi&#39;</span><span style="color:#E6E6E6">: kalkulator := x / y;</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;a = &#39;</span><span style="color:#E6E6E6">); readln(a);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;b = &#39;</span><span style="color:#E6E6E6">); readln(b);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;operasi? (tambah/kurang/kali/bagi) &#39;</span><span style="color:#E6E6E6">); readln(c);</span></span>
+<span class="line"><span style="color:#E6E6E6">  writeln(</span><span style="color:#CE9178">&#39;hasilnya &#39;</span><span style="color:#E6E6E6">, kalkulator(a, b, c):</span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">:</span><span style="color:#B5CEA8">3</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h3 id="fungsi-rekursif"><a href="#fungsi-rekursif">Fungsi rekursif</a></h3>
+<p>Fungsi rekursif adalah fungsi yang memanggil dirinya sendiri. Contoh ini
+mempunyai fungsi fibonacci untuk menghasilkan barisan angka fibonacci.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> fibonacci;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> n, i: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">function</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">fibonacci</span><span style="color:#E6E6E6">(n: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">): </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">if</span><span style="color:#E6E6E6"> n = </span><span style="color:#B5CEA8">0</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">then</span></span>
+<span class="line"><span style="color:#E6E6E6">    fibonacci := </span><span style="color:#B5CEA8">0</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">else</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">if</span><span style="color:#E6E6E6"> n = </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">then</span></span>
+<span class="line"><span style="color:#E6E6E6">    fibonacci := </span><span style="color:#B5CEA8">1</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">else</span></span>
+<span class="line"><span style="color:#E6E6E6">    fibonacci := fibonacci(n-</span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6">) + fibonacci(n-</span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">)</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(n);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(fibonacci(</span><span style="color:#B5CEA8">0</span><span style="color:#E6E6E6">));</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> i := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> n </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;, &#39;</span><span style="color:#E6E6E6">, fibonacci(i));</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h1 id="prosedur"><a href="#prosedur">Prosedur</a></h1>
+<p>Prosedur atau <em><strong>procedure</strong></em> sangatlah serupa dengan fungsi, tapi bedanya suatu
+prosedur <strong>tidak dapat mengembalikan nilai</strong>. Oleh karena itu, prosedur lebih
+sering digunakan untuk menjalankan kode yang dijalankan sendiri.</p>
+<h2 id="sintaksis-prosedur"><a href="#sintaksis-prosedur">Sintaksis Prosedur</a></h2>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">procedure</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">NAME</span><span style="color:#E6E6E6">(PARAMETER);</span></span>
+<span class="line"><span style="color:#6A9955">{ definisi variabel lokal }</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  STATEMENT;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Prosedur mempunyai sintaksis yang serupa pula dengan <a href="#sintaksis">sintaksis fungsi</a>.</p>
+<ul>
+<li><em>NAME</em> adalah nama dari fungsi tersebut,</li>
+<li><em>PARAMETER</em> adalah kumpulan variabel yang bisa dimasukkan, parameter dalam
+fungsi harus berurutan,</li>
+<li><em>STATEMENT</em> adalah kode yang akan dieksekusi, dan</li>
+</ul>
+<h2 id="contoh-prosedur"><a href="#contoh-prosedur">Contoh Prosedur</a></h2>
+<h3 id="menukar-dua-variabel"><a href="#menukar-dua-variabel">Menukar dua variabel</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> tukar;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> a, b: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">procedure</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">tukar</span><span style="color:#E6E6E6">(</span><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> x, y: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> z: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  z := x;</span></span>
+<span class="line"><span style="color:#E6E6E6">  x := y;</span></span>
+<span class="line"><span style="color:#E6E6E6">  y := z;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;a = &#39;</span><span style="color:#E6E6E6">); readln(a);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;b = &#39;</span><span style="color:#E6E6E6">); readln(b);</span></span>
+<span class="line"><span style="color:#E6E6E6">  tukar(a, b);</span></span>
+<span class="line"><span style="color:#E6E6E6">  writeln(</span><span style="color:#CE9178">&#39;setelah ditukar:&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  writeln(</span><span style="color:#CE9178">&#39;a = &#39;</span><span style="color:#E6E6E6">, a, </span><span style="color:#CE9178">&#39;, b = &#39;</span><span style="color:#E6E6E6">, b);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h3 id="menampilkan-array-integer"><a href="#menampilkan-array-integer">Menampilkan array integer</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">procedure</span><span style="color:#E6E6E6"> </span><span style="color:#DCDCAA">tampil</span><span style="color:#E6E6E6">(data: </span><span style="color:#569CD6">array</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">of</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> i: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> i := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> n </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(data[i]:</span><span style="color:#B5CEA8">3</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<h1 id="perbedaan-fungsi-dan-prosedur"><a href="#perbedaan-fungsi-dan-prosedur">Perbedaan Fungsi dan Prosedur</a></h1>
+<p>Satu-satunya perbedaan fungsi dan prosedur ialah <strong>pengembalian nilai</strong>. Jika
+fungsi dikembalikan nilainya, jika prosedur tidak.</p>
+    </article>
+    <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.f41b1ac0.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script><section class="text-center">
+    <hr class="mb-12">
+    <div class="giscus animate-pulse">
+  <p>Loading comments...</p>
+</div>
+
+<script type="module">
+const giscus = document.querySelector('.giscus');
+const observer = new IntersectionObserver(([e]) => {
+  if (!e.isIntersecting) return;
+
+  observer.unobserve(giscus);
+
+  const theme = window.localStorage.getItem('theme');
+  const giscusTheme = theme === 'dark' ? 'transparent_dark' : 'light';
+  const props = {
+    'src': 'https://giscus.app/client.js',
+    'data-repo': 'sglkc/blog',
+    'data-repo-id': 'R_kgDOIdgpXA',
+    'data-category': 'Announcements',
+    'data-category-id': 'DIC_kwDOIdgpXM4CSsGQ',
+    'data-mapping': 'pathname',
+    'data-strict': '0',
+    'data-reactions-enabled': '1',
+    'data-emit-metadata': '0',
+    'data-input-position': 'bottom',
+    'data-theme': giscusTheme,
+    'data-lang': 'en',
+    'data-loading': 'lazy',
+    'crossorigin': 'anonymous',
+    'async': true
+  };
+
+  const giscusScript = document.createElement('script');
+
+  Object.entries(props)
+    .forEach(([key, value]) => giscusScript.setAttribute(key, value));
+
+  setTimeout(() => {
+    giscus.appendChild(giscusScript);
+    giscus.classList.remove('animate-pulse');
+    giscus.style.marginTop = '-1rem';
+  }, 1000);
+},
+  { threshold: [0] }
+);
+
+observer.observe(giscus);
+
+window.giscusSend = (message) => {
+  const iframe = document.querySelector('iframe.giscus-frame');
+  if (!iframe) return;
+  iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
+</script>
+  </section>
+    <footer>
+  <hr class="mt-12">
+  <span class="flex flex-col gap-2 not-prose text-sm text-right">
+    <p><a class="underline" href="#" data-to-top>Scroll to Top</a></p>
+    <p></p>
+    <p>
+      <a class="underline" href="https://github.com/sglkc/blog/blob/master/LICENSE">MIT License</a>
+      <span>(c) 2023 sglkc</span>
+    </p>
+  </span>
+</footer>
+
+
+  </main>
+    </div>
+  </body></html>
+
+<script lang="js">
+document.querySelectorAll('article a').forEach((anchor) => {
+  const id = anchor.getAttribute('href');
+
+  if (!id.startsWith('#')) return;
+
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const elm = document.querySelector(id);
+
+    elm.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState('', '', id);
+  });
+});
+</script>
+
+<script lang="js">
+const timeElm = document.querySelector('[data-read-time]');
+const article = document.querySelector('article');
+const words = article.innerText.trim().split(/\W+/).length;
+const time = (words / 175).toString().substring(0, 3);
+
+timeElm.innerText = time + ' min read';
+</script>

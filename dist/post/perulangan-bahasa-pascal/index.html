@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="no-transitions" lang="id">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<base target="_blank">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="canonical" href="https://sglkc.my.id/post/perulangan-bahasa-pascal/">
+<link rel="alternate" href="https://sglkc.my.id/post/perulangan-bahasa-pascal/" hreflang="id">
+
+<title>3 Macam Perulangan dalam Bahasa Pemrograman Pascal // sglkc</title>
+
+<meta name="title" content="3 Macam Perulangan dalam Bahasa Pemrograman Pascal">
+<meta name="description" content="Menjeleaskan apa itu perulangan dan perbedaan antara for, while-do, danrepeat-until dalam bahasa pemrograman Pascal dengan flowchart dan contohnya
+">
+<meta name="theme-color" content="#ECC7BC">
+<meta http-equiv="content-language" content="id">
+
+<meta name="keywords" content="personal site, blogging, personal blog, blog project, portfolio, astro">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:url" content="https://sglkc.my.id/post/perulangan-bahasa-pascal/">
+<meta property="og:title" content="3 Macam Perulangan dalam Bahasa Pemrograman Pascal">
+<meta property="og:site_name" content="sglkc.my.id">
+<meta property="og:description" content="Menjeleaskan apa itu perulangan dan perbedaan antara for, while-do, danrepeat-until dalam bahasa pemrograman Pascal dengan flowchart dan contohnya
+">
+<meta property="og:image" content="https://sglkc.my.id/assets/logo.webp">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://sglkc.my.id/post/perulangan-bahasa-pascal/">
+<meta property="twitter:title" content="3 Macam Perulangan dalam Bahasa Pemrograman Pascal">
+<meta property="twitter:description" content="Menjeleaskan apa itu perulangan dan perbedaan antara for, while-do, danrepeat-until dalam bahasa pemrograman Pascal dengan flowchart dan contohnya
+">
+<meta property="twitter:image" content="https://sglkc.my.id/assets/logo.webp">
+
+
+<meta property="article:published_time" content="2023-01-02T17:00:00.000Z"><meta property="article:author" content="sglkc"><meta property="article:section" content="Blog"><meta property="article:tag" content="programming,pascal,indonesian">
+
+
+
+    <script>
+    const classList = document.documentElement.classList;
+    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'dark' || (!theme && prefDark)) classList.add('dark');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!prefMotion.matches) classList.remove('no-transitions');
+    });
+    </script>
+  <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script></head>
+  <body class="background font-overpass">
+    <div class="mx-auto p-8 prose prose-zinc dark:prose-invert max-w-[66ch]">
+      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><nav class="z-5 text-base sm:text-lg justify-center overflow-x-auto group background flex gap-3 sm:gap-5 sticky top-[-1px] mt-4 sm:mt-2 py-2 sm:py-4 border-2 border-transparent astro-P63ZB4CN" data-sticky>
+  
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:home"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 9.5 12 4l9 5.5M19 13v6.4a.6.6 0 0 1-.6.6H5.6a.6.6 0 0 1-.6-.6V13"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Home</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/blog" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="30" height="30" astro-icon="iconoir:multiple-pages"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7 18h7M7 14h1M7 10h3M7 2h9.5L21 6.5V19"/><path d="M3 20.5v-14A1.5 1.5 0 0 1 4.5 5h9.752a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 18 8.75V20.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 3 20.5z"/><path fill="currentColor" d="M14 8.4V5.354a.354.354 0 0 1 .604-.25l3.292 3.292a.353.353 0 0 1-.25.604H14.6a.6.6 0 0 1-.6-.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Blog</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/projects" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:code-brackets-square"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M10 17h-.667a2 2 0 0 1-2-2v-1.889C7.333 12.556 6 12 6 12s1.333-.556 1.333-1.111V9a2 2 0 0 1 2-2H10M14 17h.667a2 2 0 0 0 2-2v-1.889C16.667 12.556 18 12 18 12s-1.333-.556-1.333-1.111V9a2 2 0 0 0-2-2H14"/><path d="M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Projects</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/about" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:user"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M5 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">About</span>
+  </a>
+  <astro-island uid="2t2jsb" component-url="/ThemeButton.65b0039d.js" component-export="default" renderer-url="/client.60b9c972.js" props="{&quot;class&quot;:[0,&quot;cursor-pointer animate-margin astro-P63ZB4CN&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeButton&quot;,&quot;value&quot;:true}" await-children=""><button class="text-inherit cursor-pointer animate-margin astro-P63ZB4CN"><astro-slot><span class="hidden group-[.sticked]:block astro-P63ZB4CN">
+      <svg viewBox="0 0 24 24" class="dark:hidden astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:sun-light"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM22 12h1M12 2V1M12 23v-1M20 20l-1-1M20 4l-1 1M4 20l1-1M4 4l1 1M1 12h1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="hidden dark:block astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:half-moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11.507a9.493 9.493 0 0 0 18 4.219c-8.507 0-12.726-4.22-12.726-12.726A9.494 9.494 0 0 0 3 11.507z"/></svg>
+    </span><span class="group-[.sticked]:hidden astro-P63ZB4CN">Theme</span></astro-slot></button></astro-island>
+</nav>
+
+
+
+<main class="mt-12">
+    <header class="text-center">
+    <h1 class="text-3xl font-semibold mt-8">3 Macam Perulangan dalam Bahasa Pemrograman Pascal</h1>
+    
+    <h2 class="mx-4 sm:mx-6 my-6 font-italic font-normal text-base sm:text-lg">
+      Menjeleaskan apa itu perulangan dan perbedaan antara for, while-do, dan
+repeat-until dalam bahasa pemrograman Pascal dengan flowchart dan contohnya
+
+    </h2>
+    <ul class="pl-0 my-6 flex flex-wrap gap-x-4 justify-center">
+      <li class="list-none">#programming</li><li class="list-none">#pascal</li><li class="list-none">#indonesian</li>
+    </ul>
+    <ul class="pl-0 mt-4 flex flex-col gap-1 text-sm sm:text-base">
+      <li class="list-none">Posted on 3 January 2023</li>
+      
+      <li class="list-none" data-read-time>.. min read</li>
+    </ul>
+  </header>
+    <hr class="my-12">
+    <article class="tracking-tighter sm:tracking-tight">
+      <blockquote id="toc" class="pl-6 sm:pl-8 my-12 font-not-italic">
+  <h1 class="mb-2 text-2xl">Table of Contents</h1>
+  <ol class=""><li>
+          <a class="underline-dotted" href="#pengertian">Pengertian</a>
+        </li><li>
+          <a class="underline-dotted" href="#macam-macam-perulangan">Macam-macam Perulangan</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#count-controlled-loop">Count-controlled loop</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#for-loop-sederhana">For loop sederhana</a>
+        </li><li>
+          <a class="underline-dotted" href="#for-loop-dengan-percabangan">For loop dengan percabangan</a>
+        </li><li>
+          <a class="underline-dotted" href="#for-loop-rekursif">For loop rekursif</a>
+        </li></ol><li>
+          <a class="underline-dotted" href="#condition-controlled-loop">Condition-controlled loop</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#while-do">While-do</a>
+        </li><ul class="ml-0"><li>
+          <a class="underline-dotted" href="#contoh-while-do">Contoh while-do</a>
+        </li></ul><li>
+          <a class="underline-dotted" href="#repeat-until">Repeat-until</a>
+        </li><ul class="ml-0"><li>
+          <a class="underline-dotted" href="#contoh-repeat-until">Contoh repeat-until</a>
+        </li></ul><li>
+          <a class="underline-dotted" href="#perbedaan-while-do-dengan-repeat-until">Perbedaan while-do dengan repeat-until</a>
+        </li></ol><li>
+          <a class="underline-dotted" href="#perbedaan-for-dengan-perulangan-lain">Perbedaan for dengan perulangan lain</a>
+        </li></ol><li>
+          <a class="underline-dotted" href="#catatan">Catatan</a>
+        </li></ol>
+</blockquote>
+      <h1 id="pengertian"><a href="#pengertian">Pengertian</a></h1>
+<p><strong>Perulangan</strong> atau <em>loop/looping</em> seperti namanya adalah sebuah pernyataan yang
+digunakan untuk mengulang sebuah blok kode beberapa kali yang ditentukan, atau
+sampai kondisinya terpenuhi <em>(true)</em>.</p>
+<h1 id="macam-macam-perulangan"><a href="#macam-macam-perulangan">Macam-macam Perulangan</a></h1>
+<p>Perulangan dibagi menjadi 2 jenis: <em><strong>Count-controlled loop</strong></em> atau biasa
+disebut <em>for</em>, dan <em><strong>Condition-controlled loop</strong></em> yang memiliki 2 macam yaitu
+<em><strong>while-do</strong></em> dan <em><strong>repeat-until</strong></em>.</p>
+<h2 id="count-controlled-loop"><a href="#count-controlled-loop">Count-controlled loop</a></h2>
+<p>Jenis perulangan ini sering ditemui dalam bahasa pemrograman lainnya, namun
+ada sebuah perbedaan khusus untuk for dalam bahasa pemrograman Pascal.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> VARIABLE := START </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> FINISH </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> STATEMENT;</span></span></code></pre>
+<p>Dimana:</p>
+<ul>
+<li>VARIABLE adalah variabel integer sebagai penghitung <em>(counter)</em> perulangan.
+Umumnya menggunakan variabel <em>i</em>.</li>
+<li>START adalah nilai integer awal untuk penghitungnya.</li>
+<li>FINISH adalah nilai integer akhir untuk mengakhiri perulangan.</li>
+<li>STATEMENT adalah pernyataan yang ingin dijalankan dalam perulangan.</li>
+</ul>
+<p>Dalam bahasa Pascal secara spesifik, perulangan for hanya bisa melangkah <em>(step)</em>
+sekali kedepan +1 dengan <em><strong>TO</strong></em> atau kebelakang -1 dengan <em><strong>DOWNTO</strong></em>. Dalam
+artian jika awalnya 1 dan akhirnya 5, maka perulangan terjadi berurutan secara
+berurutan 1, 2, 3, 4, 5.</p>
+<p>Untuk mengubah jumlah step ini hanya bisa dilakukan menggunakan
+<a href="#condition-controlled-loop">condition-controlled loop</a>.</p>
+<h3 id="for-loop-sederhana"><a href="#for-loop-sederhana">For loop sederhana</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> i := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">10</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> writeln(i);</span></span></code></pre>
+<p>Bentuk perulangan paling sederhana ini akan mengeluarkan angka 1 sampai 10.</p>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/for.webp" alt="Flowchart perulangan for"/><figcaption>Flowchart perulangan for</figcaption></figure>
+<h3 id="for-loop-dengan-percabangan"><a href="#for-loop-dengan-percabangan">For loop dengan percabangan</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> i := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">10</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">if</span><span style="color:#E6E6E6"> i &lt; </span><span style="color:#B5CEA8">5</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">then</span><span style="color:#E6E6E6"> writeln(i, </span><span style="color:#CE9178">&#39; kurang dari 5&#39;</span><span style="color:#E6E6E6">)</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">else</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">if</span><span style="color:#E6E6E6"> i = </span><span style="color:#B5CEA8">5</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">then</span><span style="color:#E6E6E6"> writeln(i, </span><span style="color:#CE9178">&#39; adalah 5&#39;</span><span style="color:#E6E6E6">)</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">else</span><span style="color:#E6E6E6"> writeln(i, </span><span style="color:#CE9178">&#39; lebih dari 5&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Percabangan dalam perulangan ini akan mengeluarkan kalimat yang berbeda dengan
+kondisi:</p>
+<ul>
+<li>i kurang dari lima akan mengeluarkan <code>i kurang dari 5</code></li>
+<li>i sama dengan lima akan mengeluarkan <code>i adalah 5</code></li>
+<li>jika kedua kondisi tidak terpenuhi maka akan mengeluarkan <code>i lebih dari 5</code></li>
+</ul>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/for-percabangan.webp" alt="Flowchart perulangan for dengan percabangan else-if"/><figcaption>Flowchart perulangan for dengan percabangan else-if</figcaption></figure>
+<h3 id="for-loop-rekursif"><a href="#for-loop-rekursif">For loop rekursif</a></h3>
+<p>Sederhananya, perulangan rekursif adalah perulangan yang memiliki perulangan
+lagi didalamnya.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> i := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">10</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(</span><span style="color:#CE9178">&#39;BAB &#39;</span><span style="color:#E6E6E6">, i);</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> j := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">3</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> writeln(</span><span style="color:#CE9178">&#39;BAB &#39;</span><span style="color:#E6E6E6">, i, </span><span style="color:#CE9178">&#39;SUB BAB &#39;</span><span style="color:#E6E6E6">, j);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Jika dilihat sekilas, dapat dianalisis bahwa:</p>
+<ol>
+<li>Perulangan pertama dari 1 sampai 10,</li>
+<li>Perulangan pertama mengeluarkan <code>BAB i</code> untuk setiap angka dalam perulangan,</li>
+<li>Perulangan kedua dari 1 sampai 3, dan</li>
+<li>Perulangan kedua mengeluarkan <code>BAB i SUB BAB j</code> untuk setiap angka dalam
+perulangan.</li>
+</ol>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/for-rekursif.webp" alt="Flowchart perulangan for rekursif"/><figcaption>Flowchart perulangan for rekursif</figcaption></figure>
+<h2 id="condition-controlled-loop"><a href="#condition-controlled-loop">Condition-controlled loop</a></h2>
+<p>Condition-controlled loop atau perulangan yang dikontrol oleh suatu kondisi
+seperti namanya, mempunyai kondisi yang harus dipenuhi <em>(true)</em>. Jika kondisi
+bernilai <em>false</em> maka perulangan akan dilanjutkan.</p>
+<p>Perulangan ini dapat menyebabkan <em><strong>infinite loop</strong></em> jika kondisi yang diberikan
+tidak pernah dipenuhi, namun beberapa kegunaan dari infinite loop yaitu untuk
+memastikan bahwa program tidak akan pernah berhenti berjalan.</p>
+<h3 id="while-do"><a href="#while-do">While-do</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">while</span><span style="color:#E6E6E6"> CONDITION </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> STATEMENT;</span></span></code></pre>
+<p>Perulangan while-do mempunyai struktur yang serupa seperti for, namun untuk
+memberhentikan perulangan diperlukan kondisi yang dapat berupa apapun yang
+menghasilkan nilai Boolean true atau false.</p>
+<p>Jika kondisi tidak dipenuhi, maka perulangan akan dilanjutkan, namun jika
+kondisi sudah dipenuhi, maka perulangan selesai. Karena perulangan while-do
+melakukan pengecekan kondisi sebelum menjalankan pernyataan, maka perulangan itu
+sendiri bisa terlewatkan jika kondisi sudah terpenuhi.</p>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/while-do.webp" alt="Flowchart perulangan while-do"/><figcaption>Flowchart perulangan while-do</figcaption></figure>
+<h4 id="contoh-while-do"><a href="#contoh-while-do">Contoh while-do</a></h4>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">readln(i);</span></span>
+<span class="line"><span style="color:#C586C0">while</span><span style="color:#E6E6E6"> i &lt; </span><span style="color:#B5CEA8">100</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">    i := i * </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Contoh perulangan ini, jika variabel <em>i</em> bernilai dibawah 100, maka variabel <em>i</em>
+akan dikalikan dengan 2. Jika input yang dimasukkan tidak bernilai dibawah 100
+maka perulangan akan dilewat seluruhnya.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Input</th><th>Output</th></tr></thead><tbody><tr><td>2</td><td>2 4 8 16 32 64</td></tr><tr><td>3</td><td>3 6 12 24 48 96</td></tr></tbody></table>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/while-do-example.webp" alt="Flowchart contoh perulangan while-do"/><figcaption>Flowchart contoh perulangan while-do</figcaption></figure>
+<h3 id="repeat-until"><a href="#repeat-until">Repeat-until</a></h3>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">repeat</span><span style="color:#E6E6E6"> STATEMENT </span><span style="color:#C586C0">until</span><span style="color:#E6E6E6"> CONDITION;</span></span></code></pre>
+<p>Berbalikan dengan while-do, jika kondisi pada repeat-until bernilai true maka
+perulangan akan dilanjutkan, jika kondisi bernilai false maka akan perulangan
+berhenti.</p>
+<p>Perulangan repeat-until juga akan menjalankan pernyataan sebelum melakukan
+pengecekan kondisi, sehingga bisa dipastikan bahwa perulangan akan berjalan
+minimal 1 kali.</p>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/repeat-until.webp" alt="Flowchart perulangan repeat-until"/><figcaption>Flowchart perulangan repeat-until</figcaption></figure>
+<h4 id="contoh-repeat-until"><a href="#contoh-repeat-until">Contoh repeat-until</a></h4>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#C586C0">repeat</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(</span><span style="color:#CE9178">&#39;masukkan dengan benar&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">    readln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#C586C0">until</span><span style="color:#E6E6E6"> i = </span><span style="color:#CE9178">&#39;benar&#39;</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<p>Pada contoh ini, perulangan akan:</p>
+<ul>
+<li>Mengeluarkan <code>masukkan dengan benar</code>,</li>
+<li>Membaca <em>input user</em> ke variabel string <em>i</em>, dan</li>
+<li>Mengulang perulangan sampai variabel <em>i</em> bernilai ‘benar’.</li>
+</ul>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/repeat-until-example.webp" alt="Flowchart contoh perulangan repeat-until"/><figcaption>Flowchart contoh perulangan repeat-until</figcaption></figure>
+<h3 id="perbedaan-while-do-dengan-repeat-until"><a href="#perbedaan-while-do-dengan-repeat-until">Perbedaan while-do dengan repeat-until</a></h3>
+<p>Perhatikan dua potongan kode berikut dengan algoritma yang sama persis.</p>
+<ol>
+<li>Diberikan input untuk variabel <em>i</em>,</li>
+<li>Masuk kedalam bagian perulangan dengan kondisi jika <em>i</em> kurang dari 100 maka
+ulang perulangan,</li>
+<li>Mengeluarkan variabel <em>i</em>,</li>
+<li>Mengalikan variabel <em>i</em> dengan 2,</li>
+<li>Setelah perulangan selesai, keluarkan variabel <em>i</em>.</li>
+</ol>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">readln(i);</span></span>
+<span class="line"><span style="color:#C586C0">while</span><span style="color:#E6E6E6"> i &lt; </span><span style="color:#B5CEA8">100</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">    i := i * </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span></code></pre>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">readln(i);</span></span>
+<span class="line"><span style="color:#C586C0">repeat</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">    writeln(i);</span></span>
+<span class="line"><span style="color:#E6E6E6">    i := i * </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#C586C0">until</span><span style="color:#E6E6E6"> i &gt;= </span><span style="color:#B5CEA8">100</span><span style="color:#E6E6E6">;</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Perbedaan</th><th>While-do</th><th>Repeat-until</th></tr></thead><tbody><tr><td>Letak pengecekan kondisi</td><td>Awal</td><td>Akhir</td></tr><tr><td>Jika kondisi bernilai true</td><td>Melanjutkan</td><td>Selesai</td></tr><tr><td>Jika kondisi sudah terpenuhi sebelumnya</td><td>Dilewati</td><td>Berjalan sekali</td></tr></tbody></table>
+<h2 id="perbedaan-for-dengan-perulangan-lain"><a href="#perbedaan-for-dengan-perulangan-lain">Perbedaan for dengan perulangan lain</a></h2>
+<p>Perbedaan yang didapat dari for dengan perulangan lain yaitu:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Perbedaan</th><th>For</th><th>Lainnya</th></tr></thead><tbody><tr><td>Sintaksis</td><td>Wajib memiliki variabel integer penghitung</td><td>Hanya berupa kondisi boolean</td></tr><tr><td>Kondisi</td><td>Berupa integer yang bernilai jelas</td><td>Bisa dengan operator dan tipe data lain</td></tr><tr><td>Langkah</td><td>Hanya bisa naik atau turun sebanyak 1</td><td>Tidak ada langkah tertentu (sesuai kondisi)</td></tr></tbody></table>
+<p>Jadi dengan perbedaan yang sudah disebutkan,</p>
+<ol>
+<li>Perulangan for lebih cocok digunakan jika awal dan akhirnya sudah pasti,
+contohnya 1 sampai 10, atau -100 sampai 0.</li>
+<li>Karena limitasi dalam menentukan jumlah langkah, perulangan for tidak cocok
+jika digunakan seperti halnya mengalikan variabel i dengan 2.</li>
+<li>Jika ingin menggunakan operator dan tipe data selain integer, bisa menggunakan
+perulangan lainnya.</li>
+</ol>
+<h1 id="catatan"><a href="#catatan">Catatan</a></h1>
+<p>Dalam post ini digunakan bentuk flowchart paling sederhana dimana perulangan
+menggunakan blok percabangan untuk mengecek kondisi.</p>
+<p>Namun seiring perkembangan zaman, ada pula bentuk flowchart lainnya seperti yang
+ada pada aplikasi Flowgorithm.</p>
+<figure class="rehype-figure"><img src="/assets/post/perulangan-bahasa-pascal/flowgorithm.webp" alt="Flowgorithm"/><figcaption>Flowgorithm</figcaption></figure>
+<p>Lalu flowchart manakah yang lebih benar dan tepat? Tidak ada, karena flowchart
+sendiri digunakan untuk mempermudah dalam membaca kode, jadi tidak ada yang
+lebih benar dan tepat kecuali disuruh untuk membuatnya secara spesifik.</p>
+<small><em>Just my 2 cents.</em></small>
+    </article>
+    <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script><section class="text-center">
+    <hr class="mb-12">
+    <div class="giscus animate-pulse">
+  <p>Loading comments...</p>
+</div>
+
+<script type="module">
+const giscus = document.querySelector('.giscus');
+const observer = new IntersectionObserver(([e]) => {
+  if (!e.isIntersecting) return;
+
+  observer.unobserve(giscus);
+
+  const theme = window.localStorage.getItem('theme');
+  const giscusTheme = theme === 'dark' ? 'transparent_dark' : 'light';
+  const props = {
+    'src': 'https://giscus.app/client.js',
+    'data-repo': 'sglkc/blog',
+    'data-repo-id': 'R_kgDOIdgpXA',
+    'data-category': 'Announcements',
+    'data-category-id': 'DIC_kwDOIdgpXM4CSsGQ',
+    'data-mapping': 'pathname',
+    'data-strict': '0',
+    'data-reactions-enabled': '1',
+    'data-emit-metadata': '0',
+    'data-input-position': 'bottom',
+    'data-theme': giscusTheme,
+    'data-lang': 'en',
+    'data-loading': 'lazy',
+    'crossorigin': 'anonymous',
+    'async': true
+  };
+
+  const giscusScript = document.createElement('script');
+
+  Object.entries(props)
+    .forEach(([key, value]) => giscusScript.setAttribute(key, value));
+
+  setTimeout(() => {
+    giscus.appendChild(giscusScript);
+    giscus.classList.remove('animate-pulse');
+    giscus.style.marginTop = '-1rem';
+  }, 1000);
+},
+  { threshold: [0] }
+);
+
+observer.observe(giscus);
+
+window.giscusSend = (message) => {
+  const iframe = document.querySelector('iframe.giscus-frame');
+  if (!iframe) return;
+  iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
+</script>
+  </section>
+    <footer>
+  <hr class="mt-12">
+  <span class="flex flex-col gap-2 not-prose text-sm text-right">
+    <p><a class="underline" href="#" data-to-top>Scroll to Top</a></p>
+    <p></p>
+    <p>
+      <a class="underline" href="https://github.com/sglkc/blog/blob/master/LICENSE">MIT License</a>
+      <span>(c) 2023 sglkc</span>
+    </p>
+  </span>
+</footer>
+
+
+  </main>
+    </div>
+  </body></html>
+
+<script lang="js">
+document.querySelectorAll('article a').forEach((anchor) => {
+  const id = anchor.getAttribute('href');
+
+  if (!id.startsWith('#')) return;
+
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const elm = document.querySelector(id);
+
+    elm.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState('', '', id);
+  });
+});
+</script>
+
+<script lang="js">
+const timeElm = document.querySelector('[data-read-time]');
+const article = document.querySelector('article');
+const words = article.innerText.trim().split(/\W+/).length;
+const time = (words / 175).toString().substring(0, 3);
+
+timeElm.innerText = time + ' min read';
+</script>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="no-transitions" lang="id">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<base target="_blank">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="canonical" href="https://sglkc.my.id/post/studi-kasus-bahasa-pascal/">
+<link rel="alternate" href="https://sglkc.my.id/post/studi-kasus-bahasa-pascal/" hreflang="id">
+
+<title>Studi Kasus Program Piramida menggunakan Bahasa Pascal // sglkc</title>
+
+<meta name="title" content="Studi Kasus Program Piramida menggunakan Bahasa Pascal">
+<meta name="description" content="Cara membuat sebuah program untuk mencetak pola piramida menggunakan bahasa pemrograman Pascal">
+<meta name="theme-color" content="#ECC7BC">
+<meta http-equiv="content-language" content="id">
+
+<meta name="keywords" content="personal site, blogging, personal blog, blog project, portfolio, astro">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:url" content="https://sglkc.my.id/post/studi-kasus-bahasa-pascal/">
+<meta property="og:title" content="Studi Kasus Program Piramida menggunakan Bahasa Pascal">
+<meta property="og:site_name" content="sglkc.my.id">
+<meta property="og:description" content="Cara membuat sebuah program untuk mencetak pola piramida menggunakan bahasa pemrograman Pascal">
+<meta property="og:image" content="https://sglkc.my.id/assets/post/studi-kasus-bahasa-pascal.webp">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://sglkc.my.id/post/studi-kasus-bahasa-pascal/">
+<meta property="twitter:title" content="Studi Kasus Program Piramida menggunakan Bahasa Pascal">
+<meta property="twitter:description" content="Cara membuat sebuah program untuk mencetak pola piramida menggunakan bahasa pemrograman Pascal">
+<meta property="twitter:image" content="https://sglkc.my.id/assets/post/studi-kasus-bahasa-pascal.webp">
+
+
+<meta property="article:published_time" content="2023-01-07T17:00:00.000Z"><meta property="article:author" content="sglkc"><meta property="article:section" content="Blog"><meta property="article:tag" content="programming,pascal,indonesian">
+
+
+
+    <script>
+    const classList = document.documentElement.classList;
+    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'dark' || (!theme && prefDark)) classList.add('dark');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!prefMotion.matches) classList.remove('no-transitions');
+    });
+    </script>
+  <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.f41b1ac0.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script></head>
+  <body class="background font-overpass">
+    <div class="mx-auto p-8 prose prose-zinc dark:prose-invert max-w-[66ch]">
+      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><nav class="z-5 text-base sm:text-lg justify-center overflow-x-auto group background flex gap-3 sm:gap-5 sticky top-[-1px] mt-4 sm:mt-2 py-2 sm:py-4 border-2 border-transparent astro-P63ZB4CN" data-sticky>
+  
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:home"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 9.5 12 4l9 5.5M19 13v6.4a.6.6 0 0 1-.6.6H5.6a.6.6 0 0 1-.6-.6V13"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Home</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/blog" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="30" height="30" astro-icon="iconoir:multiple-pages"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7 18h7M7 14h1M7 10h3M7 2h9.5L21 6.5V19"/><path d="M3 20.5v-14A1.5 1.5 0 0 1 4.5 5h9.752a.6.6 0 0 1 .424.176l3.148 3.148A.6.6 0 0 1 18 8.75V20.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 3 20.5z"/><path fill="currentColor" d="M14 8.4V5.354a.354.354 0 0 1 .604-.25l3.292 3.292a.353.353 0 0 1-.25.604H14.6a.6.6 0 0 1-.6-.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Blog</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/projects" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:code-brackets-square"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M10 17h-.667a2 2 0 0 1-2-2v-1.889C7.333 12.556 6 12 6 12s1.333-.556 1.333-1.111V9a2 2 0 0 1 2-2H10M14 17h.667a2 2 0 0 0 2-2v-1.889C16.667 12.556 18 12 18 12s-1.333-.556-1.333-1.111V9a2 2 0 0 0-2-2H14"/><path d="M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">Projects</span>
+  </a>
+  <a class="animate-margin astro-P63ZB4CN" rel="prefetch" href="/about" target="_self">
+    <svg viewBox="0 0 24 24" class="hidden group-[.sticked]:block astro-P63ZB4CN" width="32" height="32" astro-icon="iconoir:user"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M5 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></g></svg>
+    <span class="group-[.sticked]:hidden astro-P63ZB4CN">About</span>
+  </a>
+  <astro-island uid="2t2jsb" component-url="/ThemeButton.65b0039d.js" component-export="default" renderer-url="/client.60b9c972.js" props="{&quot;class&quot;:[0,&quot;cursor-pointer animate-margin astro-P63ZB4CN&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeButton&quot;,&quot;value&quot;:true}" await-children=""><button class="text-inherit cursor-pointer animate-margin astro-P63ZB4CN"><astro-slot><span class="hidden group-[.sticked]:block astro-P63ZB4CN">
+      <svg viewBox="0 0 24 24" class="dark:hidden astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:sun-light"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM22 12h1M12 2V1M12 23v-1M20 20l-1-1M20 4l-1 1M4 20l1-1M4 4l1 1M1 12h1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="hidden dark:block astro-P63ZB4CN" width="28" height="28" astro-icon="iconoir:half-moon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11.507a9.493 9.493 0 0 0 18 4.219c-8.507 0-12.726-4.22-12.726-12.726A9.494 9.494 0 0 0 3 11.507z"/></svg>
+    </span><span class="group-[.sticked]:hidden astro-P63ZB4CN">Theme</span></astro-slot></button></astro-island>
+</nav>
+
+
+
+<main class="mt-12">
+    <header class="text-center">
+    <h1 class="text-3xl font-semibold mt-8">Studi Kasus Program Piramida menggunakan Bahasa Pascal</h1>
+    <img class="aspect-video object-contain" src="/assets/post/studi-kasus-bahasa-pascal.webp" alt="Studi Kasus Program Piramida menggunakan Bahasa Pascal thumbnail image" draggable="false" width="100%" height="100%">
+    <h2 class="mx-4 sm:mx-6 my-6 font-italic font-normal text-base sm:text-lg">
+      Cara membuat sebuah program untuk mencetak pola piramida menggunakan bahasa pemrograman Pascal
+    </h2>
+    <ul class="pl-0 my-6 flex flex-wrap gap-x-4 justify-center">
+      <li class="list-none">#programming</li><li class="list-none">#pascal</li><li class="list-none">#indonesian</li>
+    </ul>
+    <ul class="pl-0 mt-4 flex flex-col gap-1 text-sm sm:text-base">
+      <li class="list-none">Posted on 8 January 2023</li>
+      
+      <li class="list-none" data-read-time>.. min read</li>
+    </ul>
+  </header>
+    <hr class="my-12">
+    <article class="tracking-tighter sm:tracking-tight">
+      <blockquote id="toc" class="pl-6 sm:pl-8 my-12 font-not-italic">
+  <h1 class="mb-2 text-2xl">Table of Contents</h1>
+  <ol class=""><li>
+          <a class="underline-dotted" href="#soal">Soal</a>
+        </li><li>
+          <a class="underline-dotted" href="#pengerjaan">Pengerjaan</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#membuat-boilerplate">Membuat Boilerplate</a>
+        </li><li>
+          <a class="underline-dotted" href="#deklarasi-variabel-dari-soal">Deklarasi Variabel dari Soal</a>
+        </li><li>
+          <a class="underline-dotted" href="#perulangan-baris">Perulangan Baris</a>
+        </li><li>
+          <a class="underline-dotted" href="#perulangan-piramida-karakter">Perulangan Piramida Karakter</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#rumus-jumlah-karater-pada-setiap-baris">Rumus Jumlah Karater pada Setiap Baris</a>
+        </li><li>
+          <a class="underline-dotted" href="#penerapan">Penerapan</a>
+        </li></ol><li>
+          <a class="underline-dotted" href="#menjajarkan-piramida-karakter">Menjajarkan Piramida Karakter</a>
+        </li><ol class="ml-0"><li>
+          <a class="underline-dotted" href="#rumus-jumlah-spasi-pada-setiap-baris">Rumus Jumlah Spasi pada Setiap Baris</a>
+        </li><li>
+          <a class="underline-dotted" href="#penerapan-1">Penerapan</a>
+        </li></ol></ol><li>
+          <a class="underline-dotted" href="#penyederhanaan">Penyederhanaan</a>
+        </li><li>
+          <a class="underline-dotted" href="#akhir-kata">Akhir Kata</a>
+        </li></ol>
+</blockquote>
+      <h1 id="soal"><a href="#soal">Soal</a></h1>
+<p>Buatkan sebuah program yang mencetak sebuah piramida dengan karakter *.
+Variabel <em>jumlah_baris</em> merupakan input yang menentukan jumlah baris pada
+piramida. Dengan contoh input jumlah_baris=5 adalah sebagai berikut:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">    *</span></span>
+<span class="line"><span style="color:#E6E6E6">   ***</span></span>
+<span class="line"><span style="color:#E6E6E6">  *****</span></span>
+<span class="line"><span style="color:#E6E6E6"> *******</span></span>
+<span class="line"><span style="color:#E6E6E6">*********</span></span></code></pre>
+<h1 id="pengerjaan"><a href="#pengerjaan">Pengerjaan</a></h1>
+<h2 id="membuat-boilerplate"><a href="#membuat-boilerplate">Membuat Boilerplate</a></h2>
+<p><em>Boilerplate</em> adalah bagian kode yang biasa digunakan dimanapun. Pada pemrograman
+bahasa Pascal kita biasa untuk menuliskan struktur awal sederhananya seperti ini:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> nama_program;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<h2 id="deklarasi-variabel-dari-soal"><a href="#deklarasi-variabel-dari-soal">Deklarasi Variabel dari Soal</a></h2>
+<p>Dari soal bisa diketahui bahwa <em>jumlah_baris</em> adalah variabel integer positif
+yang bisa di input oleh pengguna. Kita bisa memasukkan variabel dan inputan ke
+boilerplate yang dibuat sebelumnya:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> piramida;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> jumlah_baris : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan jumlah baris: &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(jumlah_baris);</span></span>
+<span class="line"><span style="color:#E6E6E6">  writeln(</span><span style="color:#CE9178">&#39;jumlah baris: &#39;</span><span style="color:#E6E6E6">, jumlah_baris);</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<p>Kode tersebut digunakan untuk mencoba jika variabel <em>jumlah_baris</em> sesuai
+dengan input yang dimasukkan.</p>
+<h2 id="perulangan-baris"><a href="#perulangan-baris">Perulangan Baris</a></h2>
+<p>Setelah membuat input variabel <em>jumlah_baris</em>, kita bisa menggunakan
+<a href="/post/perulangan-bahasa-pascal#for-loop-sederhana">perulangan for</a> untuk
+membuatkan masing-masing baris.</p>
+<p>Deklarasikan variabel <em>baris</em> untuk digunakan di perulangan for. Pada perulangan
+ini, variabel <em>baris</em> dimulai dari 1 dan berakhir sampai <em>jumlah_baris</em>.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> piramida;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> jumlah_baris, baris : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan jumlah baris: &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(jumlah_baris);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> baris := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_baris </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">      writeln(</span><span style="color:#CE9178">&#39;ini baris ke-&#39;</span><span style="color:#E6E6E6">, baris);</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<p>Jika kita masukkan 5, maka program akan mengeluarkan</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">masukkan jumlah baris: 5</span></span>
+<span class="line"><span style="color:#E6E6E6">jumlah baris: 5</span></span>
+<span class="line"><span style="color:#E6E6E6">ini baris ke-1</span></span>
+<span class="line"><span style="color:#E6E6E6">ini baris ke-2</span></span>
+<span class="line"><span style="color:#E6E6E6">ini baris ke-3</span></span>
+<span class="line"><span style="color:#E6E6E6">ini baris ke-4</span></span>
+<span class="line"><span style="color:#E6E6E6">ini baris ke-5</span></span></code></pre>
+<h2 id="perulangan-piramida-karakter"><a href="#perulangan-piramida-karakter">Perulangan Piramida Karakter</a></h2>
+<p>Kita sudah berhasil mencetak baris sesuai dengan input <em>jumlah_baris</em>. Sekarang
+kita coba untuk membuat perulangan karakter * yang membentuk seperti piramida.</p>
+<h3 id="rumus-jumlah-karater-pada-setiap-baris"><a href="#rumus-jumlah-karater-pada-setiap-baris">Rumus Jumlah Karater pada Setiap Baris</a></h3>
+<p>Lihat lagi output pada soal dan hitung jumlah karakter * pada setiap baris:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">    *     &lt;- 1</span></span>
+<span class="line"><span style="color:#E6E6E6">   ***    &lt;- 3</span></span>
+<span class="line"><span style="color:#E6E6E6">  *****   &lt;- 5</span></span>
+<span class="line"><span style="color:#E6E6E6"> *******  &lt;- 7</span></span>
+<span class="line"><span style="color:#E6E6E6">********* &lt;- 9</span></span></code></pre>
+<p>Kita bisa menyimpulkan bahwa setiap baris mempunyai jumlah karakter <strong>ganjil</strong>.</p>
+<p>Rumus untuk pola bilangan ganjil adalah <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>n</mi><mo>=</mo><mn>2</mn><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">Un = 2n - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>. Kalau digunakan
+variabel pada program maka rumus tersebut menjadi:</p>
+<div class="my-2 text-center">
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>u</mi><mi>m</mi><mi>l</mi><mi>a</mi><mi>h</mi><mi mathvariant="normal">_</mi><mi>k</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>k</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mo>∗</mo><mi>b</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>s</mi><mo stretchy="false">)</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">jumlah\_karakter = (2 * baris) - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0044em;vertical-align:-0.31em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">ah</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathnormal">ka</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03148em;">ak</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ba</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>
+  </div>
+<h3 id="penerapan"><a href="#penerapan">Penerapan</a></h3>
+<p>Deklarasikan variabel <em>jumlah_karakter</em> dan <em>karakter</em>.</p>
+<p>Didalam perulangan baris, ubah nilai variabel <em>jumlah_karakter</em> dengan rumus diatas.</p>
+<p>Lalu buat lagi perulangan dengan variabel awal <em>karakter</em> dimulai dari 1 dan
+berakhir sampai <em>jumlah_karakter</em>. Cetak sebuah karakter * dalam perulangan
+tersebut dengan <code>write</code>.</p>
+<p>Jangan lupa untuk membuat baris baru dengan <code>writeln</code>.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> piramida;</span></span>
+<span class="line"><span style="color:#569CD6">var</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#6A9955">{ dipisah agar lebih jelas }</span></span>
+<span class="line"><span style="color:#E6E6E6">  jumlah_baris, baris: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  jumlah_karakter, karakter : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan jumlah baris: &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(jumlah_baris);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> baris := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_baris </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">      jumlah_karakter := </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6"> * baris - </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">      </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> karakter := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_karakter </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;*&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">      writeln;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<p>Berikut output jika kita memasukkan 5:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">masukkan jumlah baris: 5</span></span>
+<span class="line"><span style="color:#E6E6E6">*</span></span>
+<span class="line"><span style="color:#E6E6E6">***</span></span>
+<span class="line"><span style="color:#E6E6E6">*****</span></span>
+<span class="line"><span style="color:#E6E6E6">*******</span></span>
+<span class="line"><span style="color:#E6E6E6">*********</span></span></code></pre>
+<p>Jumlah karakter di setiap baris pada output sudah sama dengan jumlah karakter
+pada soal, namun karakter tersebut belum membentuk sebuah piramida.</p>
+<h2 id="menjajarkan-piramida-karakter"><a href="#menjajarkan-piramida-karakter">Menjajarkan Piramida Karakter</a></h2>
+<p>Output sebelumnya belum sesuai dengan pada soal, jadi kita harus membuat spasi
+agar karakter * bisa disejajarkan.</p>
+<h3 id="rumus-jumlah-spasi-pada-setiap-baris"><a href="#rumus-jumlah-spasi-pada-setiap-baris">Rumus Jumlah Spasi pada Setiap Baris</a></h3>
+<p>Perhatikan lagi output pada soal dan hitung jumlah spasi pada setiap baris:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">    *     &lt;- 4 spasi</span></span>
+<span class="line"><span style="color:#E6E6E6">   ***    &lt;- 3 spasi</span></span>
+<span class="line"><span style="color:#E6E6E6">  *****   &lt;- 2 spasi</span></span>
+<span class="line"><span style="color:#E6E6E6"> *******  &lt;- 1 spasi</span></span>
+<span class="line"><span style="color:#E6E6E6">********* &lt;- 0 spasi</span></span></code></pre>
+<p>Pola disini sudah jelas kalau jumlah spasi pada setiap baris adalah jumlah baris
+dikurangi oleh baris itu sendiri. Sehingga</p>
+<div class="my-2 text-center">
+    <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>u</mi><mi>m</mi><mi>l</mi><mi>a</mi><mi>h</mi><mi mathvariant="normal">_</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>s</mi><mi>i</mi><mo>=</mo><mi>j</mi><mi>u</mi><mi>m</mi><mi>l</mi><mi>a</mi><mi>h</mi><mi mathvariant="normal">_</mi><mi>b</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>s</mi><mo>−</mo><mi>b</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">jumlah\_spasi = jumlah\_baris - baris</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0044em;vertical-align:-0.31em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">ah</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0044em;vertical-align:-0.31em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">ah</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathnormal">ba</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">ba</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span></span></span></span>
+  </div>
+<h3 id="penerapan-1"><a href="#penerapan-1">Penerapan</a></h3>
+<p>Deklarasikan variabel <em>jumlah_spasi</em> dan <em>spasi</em>.</p>
+<p>Didalam perulangan baris, ubah nilai variabel <em>jumlah_spasi</em> dengan rumus diatas.</p>
+<p>Seperti sebelumnya, buat lagi perulangan <strong>diatas perulangan sebelumnya</strong> dengan
+variabel awal <em>spasi</em> dimulai dari 1 dan berakhir sampai <em>jumlah_spasi</em>. Cetak
+spasi ’ ’ dalam perulangan tersebut dengan <code>write</code>.</p>
+<p>Kali ini, tidak perlu membuat baris baru dengan <code>writeln</code> karena akan dilakukan
+setelah membuat barisan karakter *.</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> piramida;</span></span>
+<span class="line"><span style="color:#569CD6">var</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#6A9955">{ dipisah agar lebih jelas }</span></span>
+<span class="line"><span style="color:#E6E6E6">  jumlah_baris, baris: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  jumlah_spasi, spasi : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">  jumlah_karakter, karakter : </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan jumlah baris: &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(jumlah_baris);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> baris := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_baris </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">      jumlah_spasi := jumlah_baris - baris;</span></span>
+<span class="line"><span style="color:#E6E6E6">      </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> spasi := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_spasi </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39; &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6E6E6">      jumlah_karakter := </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6"> * baris - </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#E6E6E6">      </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> karakter := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_karakter </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;*&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">      writeln;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<p>Jika kita input 5, maka akan menghasilkan:</p>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#E6E6E6">masukkan jumlah baris: 5</span></span>
+<span class="line"><span style="color:#E6E6E6">    *</span></span>
+<span class="line"><span style="color:#E6E6E6">   ***</span></span>
+<span class="line"><span style="color:#E6E6E6">  *****</span></span>
+<span class="line"><span style="color:#E6E6E6"> *******</span></span>
+<span class="line"><span style="color:#E6E6E6">*********</span></span></code></pre>
+<p>Pada akhirnya, program kita sudah mengeluarkan output yang sama dengan soal.
+Selamat!! <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">redeem hadiah</a>.</p>
+<h1 id="penyederhanaan"><a href="#penyederhanaan">Penyederhanaan</a></h1>
+<p>Tahap ini opsional, tapi kalau merasa kode program terlalu panjang atau <em>verbose</em>
+dapat dilakukan:</p>
+<ul>
+<li>Hapus variabel <em>jumlah_spasi</em> dan <em>jumlah_karakter</em> karena hanya sekali pakai, dan</li>
+<li>Gunakan hanya satu variabel saja untuk setiap perulangan dalam setiap baris.</li>
+</ul>
+<pre class="astro-code" style="background-color:#222222;overflow-x:auto"><code><span class="line"><span style="color:#569CD6">program</span><span style="color:#E6E6E6"> piramida;</span></span>
+<span class="line"><span style="color:#569CD6">var</span><span style="color:#E6E6E6"> jumlah_baris, baris, karakter: </span><span style="color:#569CD6">integer</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;masukkan jumlah baris: &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">  readln(jumlah_baris);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6E6E6">  </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> baris := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_baris </span><span style="color:#C586C0">do</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">begin</span></span>
+<span class="line"><span style="color:#E6E6E6">      </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> karakter := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> jumlah_baris - baris </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39; &#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">      </span><span style="color:#C586C0">for</span><span style="color:#E6E6E6"> karakter := </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">to</span><span style="color:#E6E6E6"> </span><span style="color:#B5CEA8">2</span><span style="color:#E6E6E6"> * baris - </span><span style="color:#B5CEA8">1</span><span style="color:#E6E6E6"> </span><span style="color:#C586C0">do</span><span style="color:#E6E6E6"> </span><span style="color:#569CD6">write</span><span style="color:#E6E6E6">(</span><span style="color:#CE9178">&#39;*&#39;</span><span style="color:#E6E6E6">);</span></span>
+<span class="line"><span style="color:#E6E6E6">      writeln;</span></span>
+<span class="line"><span style="color:#E6E6E6">    </span><span style="color:#569CD6">end</span><span style="color:#E6E6E6">;</span></span>
+<span class="line"><span style="color:#569CD6">end</span><span style="color:#E6E6E6">.</span></span></code></pre>
+<p><strong>Catatan:</strong> Kode yang bagus bukanlah kode yang terpendek, tetapi kode yang mudah
+dibaca dan dipahami oleh orang lain, jadi tidak salah untuk menggunakan variabel
+di setiap perhitungan.</p>
+<h1 id="akhir-kata"><a href="#akhir-kata">Akhir Kata</a></h1>
+<p>Semoga post ini bisa membantu, jangan lupakan penempatan titik koma yang baik
+dan benar. Perbanyak membaca dan praktek karena kita semua tahu kalau otak
+manusia ga bisa yang namanya <em>compile</em> kode komputer.
+<small>(sarkasin tugas ngoding di kertas)</small></p>
+<p><strong>Sekian terima kasih.</strong></p>
+    </article>
+    <link rel="stylesheet" href="/assets/404.02da3115.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.f41b1ac0.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.c38c8099.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.2cc23c28.css" />
+<link rel="stylesheet" href="/assets/fungsi-prosedur-bahasa-pascal.8e69fe4d.css" /><script type="module" src="/hoisted.96ca70fc.js"></script>
+<script type="module" src="/page.5a6f3db5.js"></script><section class="text-center">
+    <hr class="mb-12">
+    <div class="giscus animate-pulse">
+  <p>Loading comments...</p>
+</div>
+
+<script type="module">
+const giscus = document.querySelector('.giscus');
+const observer = new IntersectionObserver(([e]) => {
+  if (!e.isIntersecting) return;
+
+  observer.unobserve(giscus);
+
+  const theme = window.localStorage.getItem('theme');
+  const giscusTheme = theme === 'dark' ? 'transparent_dark' : 'light';
+  const props = {
+    'src': 'https://giscus.app/client.js',
+    'data-repo': 'sglkc/blog',
+    'data-repo-id': 'R_kgDOIdgpXA',
+    'data-category': 'Announcements',
+    'data-category-id': 'DIC_kwDOIdgpXM4CSsGQ',
+    'data-mapping': 'pathname',
+    'data-strict': '0',
+    'data-reactions-enabled': '1',
+    'data-emit-metadata': '0',
+    'data-input-position': 'bottom',
+    'data-theme': giscusTheme,
+    'data-lang': 'en',
+    'data-loading': 'lazy',
+    'crossorigin': 'anonymous',
+    'async': true
+  };
+
+  const giscusScript = document.createElement('script');
+
+  Object.entries(props)
+    .forEach(([key, value]) => giscusScript.setAttribute(key, value));
+
+  setTimeout(() => {
+    giscus.appendChild(giscusScript);
+    giscus.classList.remove('animate-pulse');
+    giscus.style.marginTop = '-1rem';
+  }, 1000);
+},
+  { threshold: [0] }
+);
+
+observer.observe(giscus);
+
+window.giscusSend = (message) => {
+  const iframe = document.querySelector('iframe.giscus-frame');
+  if (!iframe) return;
+  iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
+</script>
+  </section>
+    <footer>
+  <hr class="mt-12">
+  <span class="flex flex-col gap-2 not-prose text-sm text-right">
+    <p><a class="underline" href="#" data-to-top>Scroll to Top</a></p>
+    <p></p>
+    <p>
+      <a class="underline" href="https://github.com/sglkc/blog/blob/master/LICENSE">MIT License</a>
+      <span>(c) 2023 sglkc</span>
+    </p>
+  </span>
+</footer>
+
+
+  </main>
+    </div>
+  </body></html>
+
+<script lang="js">
+document.querySelectorAll('article a').forEach((anchor) => {
+  const id = anchor.getAttribute('href');
+
+  if (!id.startsWith('#')) return;
+
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const elm = document.querySelector(id);
+
+    elm.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState('', '', id);
+  });
+});
+</script>
+
+<script lang="js">
+const timeElm = document.querySelector('[data-read-time]');
+const article = document.querySelector('article');
+const words = article.innerText.trim().split(/\W+/).length;
+const time = (words / 175).toString().substring(0, 3);
+
+timeElm.innerText = time + ' min read';
+</script>
