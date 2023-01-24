@@ -11,7 +11,7 @@ import rehypeFigure from 'rehype-figure';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://sglkc.my.id",
+  site: "https://sensen.vercel.app",
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [
